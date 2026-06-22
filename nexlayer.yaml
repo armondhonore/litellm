@@ -1,0 +1,10 @@
+application:
+  name: litellm
+  pods:
+  - name: app
+    image: ghcr.io/berriai/litellm:main-latest
+    path: /
+    servicePorts:
+    - 4000
+    vars:
+      LITELLM_MASTER_KEY: sk-1234
