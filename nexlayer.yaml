@@ -4,7 +4,6 @@ application:
   - name: app
     image: ghcr.io/berriai/litellm:main-latest
     path: /
-    command: sh -c "printf 'model_list: []\ngeneral_settings:\n  master_key: sk-1234\n' > /tmp/config.yaml && exec litellm --config /tmp/config.yaml --port 4000 --host 0.0.0.0"
     servicePorts:
     - 4000
     vars:
